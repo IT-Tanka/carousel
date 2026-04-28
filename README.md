@@ -68,15 +68,3 @@ Build:
 npm run build
 ```
 
-## Notes / interview-ready details
-
-- **No carousel libs**: all carousel logic is implemented manually.
-- **Modulo indexing**: wrapping is done with `% images.length` (and index normalization when list size changes).
-- **Cleanup**: `resize` listener is removed on unmount to avoid leaks.
-- **Image sizing**: the rendered `<img>` uses `https://picsum.photos/id/{id}/{w}/{h}` instead of `download_url` to avoid loading huge original images.
-
-## Potential improvements (nice-to-have)
-
-- Animate the selected list with Vue `<TransitionGroup>` (extra requirement).
-- Add keyboard shortcuts (Left/Right arrows) and swipe/drag support.
-- Improve carousel alignment math to account for flex `gap` precisely across all viewport sizes.
